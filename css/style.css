@@ -879,6 +879,10 @@ img {
 
 }
 
+.modal-form {
+    padding-top: 48px;
+}
+
 .modal-icon {
     width: 8px;
     height: 8px;
