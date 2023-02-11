@@ -876,29 +876,22 @@ img {
     min-width: 408px;
     padding: 24px;
     background-color: #fcfcfc;
+    border-radius: 4px;
 
 }
 
 /*___________________madal-form_______________________*/
 
-.modal-form {
-    padding-top: 48px;
-}
-
-.form input:focus {
+.form-name input:focus,
+.form input:focus,
+.modal-textarea:focus {
     border: 1px solid #4D5AE5;
     outline: none;
 }
-.form-name input:focus {
-    border: 1px solid #4D5AE5;
-    outline: none;
-}
-.form-name input:focus ~ .modal-svg {
-    fill: #4D5AE5;
-}
 
-.uni-form input:focus ~ .modal-svg-email,
-.uni-form input:focus ~ .modal-svg-tel {
+.form-name input:focus ~ .modal-svg-name,
+.form input:focus ~ .modal-svg-tel,
+.form input:focus ~ .modal-svg-email {
     fill: #4D5AE5;
 }
 
@@ -951,13 +944,16 @@ img {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
     padding-left: 38px;
+    padding-right: 4px;
+    padding-top: 0;
+    padding-bottom: 0;
     transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-svg-name {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 78%;
+    transform: translateY(-78%);
     left: 17.5px;
     width: 18px;
     height: 24px;
@@ -967,18 +963,18 @@ img {
 
 .modal-svg-tel {
     position: absolute;
-    top: 50%;
-    left: 19px;
+    top: 82%;
+    left: 18px;
     width: 18px;
     height: 24px;
-    transform: translateY(-50% );
+    transform: translateY(-82% );
     transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-svg-email {
     position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
+    top: 81%;
+    transform: translateY(-81%);
     left: 17.5px;
     width: 18px;
     height: 24px;
@@ -1003,6 +999,7 @@ img {
     background-color: #E7E9FC;
     border: 1px solid rgba(0, 0, 0, 0.1);
     cursor: pointer;
+    margin-bottom: 24px;
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 
 }
@@ -1011,4 +1008,69 @@ img {
 .modal-btn:focus {
     background-color: #404BBF;
     fill: #FFFFFF;
+}
+
+.modal-textarea{
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    padding: 10px;
+    resize: none;
+}
+
+.model-label {
+    display: flex;
+    align-items: center;
+    padding-top: 16px;
+    padding-bottom: 24px;
+}
+
+.checkbox{
+    width: 16px;
+    height: 16px;
+    border: 1.25px solid #404BBF;
+    color: #404BBF;
+    border-radius: 2px;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+
+}
+
+.checkbox-content {
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 16px;
+    letter-spacing: 0.04em;
+    color: #757575;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin-left: 8px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+.button-send-modal {
+    letter-spacing: 0.04em;
+    text-align: center;
+    font-family: 'Roboto';
+    font-weight: 500;
+    display: flex;
+    align-items: flex-start;
+    padding: 16px 48px;
+    background: #4D5AE5;
+    color: #FFFFFF;
+    cursor: pointer;
+    border-radius: 4px;
+    margin-left: auto;
+    margin-right: auto;
+    border: 0;
+    box-shadow: 0px 1px 6px rgb(46 47 66 / 8%), 0px 1px 1px rgb(46 47 66 / 16%), 0px 2px 1px rgb(46 47 66 / 8%);
 }
